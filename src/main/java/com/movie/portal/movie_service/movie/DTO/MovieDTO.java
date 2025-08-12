@@ -15,16 +15,6 @@ public class MovieDTO {
 
     public MovieDTO() {}
 
-    public MovieDTO(Long id, String title, String description, String genre, int releaseYear, String posterUrl, String trailerUrl) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.genre = genre;
-        this.releaseYear = releaseYear;
-        this.posterUrl = posterUrl;
-        this.trailerUrl = trailerUrl;
-    }
-
     public MovieDTO(Builder builder) {
         id = builder.id;
         title = builder.title;
