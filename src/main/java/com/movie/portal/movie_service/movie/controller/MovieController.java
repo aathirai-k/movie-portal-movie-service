@@ -48,7 +48,7 @@ public class MovieController {
      *
      * @return a list of all movies wrapped in a {@link ResponseEntity}
      */
-    @PostMapping("/allMovie")
+    @GetMapping("/allMovie")
     public ResponseEntity<List<MovieDTO>> getAllMovieDetails() {
         return ResponseEntity.ok(movieService.getAllMovieDetails());
     }

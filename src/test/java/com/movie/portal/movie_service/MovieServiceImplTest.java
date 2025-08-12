@@ -33,7 +33,15 @@ public class MovieServiceImplTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
         movie = new Movie(1L, "Title", "Trailer", "Poster", 2025, "Genre", "Description");
-        movieDTO = new MovieDTO(1L, "Title", "Description", "Genre", 2025, "Poster", "Trailer");
+        movieDTO = new MovieDTO.Builder()
+                .id(1L)
+                .title("Title")
+                .description("Description")
+                .genre("Genre")
+                .releaseYear(2025)
+                .posterUrl("Poster")
+                .trailerUrl("Trailer")
+                .build();
     }
 
     @Test
